@@ -50,18 +50,18 @@ git clone https://github.com/tomasmartins/docker-voltronic-homeassistant.git /op
 cd /opt/ha-inverter-mqtt-agent
 
 # Configure the 'device=' directive (in inverter.conf) to suit for RS232 or USB.. 
-vi config/inverter.conf
+nano config/inverter.conf
 
 # Configure your MQTT server's IP/Host Name, Port, Credentials, HA topic, and name of the Inverter that you want displayed in Home Assistant...
 # If your MQTT server does not need a username/password just leave these values empty.
 
-vi config/mqtt.json
+nano config/mqtt.json
 ```
 
 Then, plug in your Serial or USB cable to the Inverter & stand up the container:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 
 ```
 
